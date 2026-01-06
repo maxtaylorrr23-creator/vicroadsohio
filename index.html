@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myVicRoads</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home" class="screen active">
+  <img src="IMG_6273.jpeg" class="full-image">
+
+  <!-- Big blue My Licence button -->
+  <button class="btn-my-licence" onclick="openLicence()" aria-label="My Licence"></button>
+
+  <!-- Bottom Licence icon -->
+  <button class="btn-licence-bottom" onclick="openLicence()" aria-label="Licence"></button>
+</div>
+
+<!-- LICENCE SCREEN -->
+<div id="licence" class="screen">
+
+  <div class="header">
+    <div class="back-hitbox" onclick="goHome()"></div>
+    <span class="title">Back</span>
+  </div>
+
+  <div class="refresh-time" id="refreshTime"></div>
+
+  <div class="scroll-area">
+    <img src="IMG_6265.jpeg" class="scroll-image">
+
+    <!-- QR reveal via image text -->
+    <div class="qr-tap-zone" onclick="showQR()">
+      <img src="IMG_6270.jpeg" class="scroll-image">
+    </div>
+  </div>
+
+  <!-- QR Overlay -->
+  <div id="qrOverlay" onclick="hideQR()">
+    <canvas id="qrCanvas"></canvas>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
